@@ -1,0 +1,151 @@
+.sign-in-page {
+    background-image: url(../../img/login-background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1106px;
+    color: $dark-background-font-color;
+    font-weight: lighter;
+}
+
+.sign-in-container {
+    display: grid;
+    grid-template-columns: 34% 31% 35%;
+    grid-template-rows: 26% 55% 19%;
+    height: 100%;
+}
+
+.sign-in-4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.logo {
+    background-image: url(../../img/efi3-logo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 160px;
+    height: 160px;
+    margin-right: 22px;
+}
+
+.sign-in-5 {
+    background-color: $app-items-color;
+    border-radius: $sign-in-section-border-radius;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.client-number-text {
+    margin-top: 0;
+    font-size: 40px;
+}
+
+.client-number-instruction {
+    font-size: 15px;
+}
+
+form{
+    min-height: 40%;
+    width: 95%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset {
+    border: thin solid $dark-background-font-color;
+    padding: 10% 0 5% 0;
+    margin-bottom: 20%;
+    border-radius: $sign-in-section-border-radius;
+    display: block;
+    width: 95%;
+    
+    
+}
+
+legend {
+    display: block;
+    width: 94px;
+    margin: 0;
+    padding: 0;
+}
+
+.white-circle {
+    display: block;
+    width: 94px;
+    height: 94px;
+    background-color: $dark-background-font-color;
+    border-radius: 50%;
+    margin: 0;
+}
+
+.client-number {
+    width: 85%;
+    height: 35px;
+    border-radius: $sign-in-section-border-radius;
+    font-size: 18px;
+}
+
+.select-other {
+    background-color: transparent;
+    border: 0;
+    color: $dark-background-font-color;
+    opacity: 0.8;
+}
+.client-number-go {
+    width: 118px;
+    height: 31px;
+    background-color: $dark-background-font-color;
+    border-radius: $sign-in-section-border-radius;
+    margin-top: 15px;
+}
+
+.sign-in-links {
+    text-decoration: none;
+    font-size: 11px;
+    margin: 10px 20px 0 0;
+    color: $dark-background-font-color;
+}
+
+.number-with-cross {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.client-number-disable {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin: 0 0 0 10px;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.cross {
+    width: 12px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 0 auto;
+}
+.cross-line-1 {
+    transform: translateY(1px) rotate(45deg) ;
+}
+.cross-line-2 {
+    transform: translateY(-1px) rotate(-45deg) ;
+}
+.keyboard {
+    margin-left: 10px;
+}
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

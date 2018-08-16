@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>efi3</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/virtual-keyboard-plugin@1.1.1/dist/virtual-keyboard.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <section class="sign-in-page">
+        <div class="sign-in-container">
+            <div class="sign-in-1"></div>
+            <div class="sign-in-2"></div>
+            <div class="sign-in-3"></div>
+            <div class="sign-in-4">
+                <div class="logo"></div>
+            </div>
+            <div class="sign-in-5">
+                <div class="instruction-wrapper">
+                    <h1 class="client-number-text">Login</h1>
+                    <h2 class="client-number-instruction" id="instruction-for-client">Aby rozpocząć logowanie należy wprowadzić swój Numer Klienta</h2>
+                </div>
+                <form action="">
+                    <fieldset>
+                        <legend><span class="white-circle"></span></legend>
+                        <div class="number-with-cross">
+                            <p id="client-number"></p>
+                            <button class="client-number-disable" id="sign-in-back" aria-label="close" type="button"><div class="cross cross-line-1"></div><div class="cross cross-line-2"></div></button>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="tel" autocomplete="off" placeholder="Numer Klienta" class="client-number" id="set-client-number" virtual-keyboard>
+                            <input type="password" class="client-number" id="client-password" virtual-keyboard>
+                            <div class="virtual-keyboard-hook keyboard" data-target-id="set-client-number" id="keyboard-1" data-keyboard-mapping="azerty"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
+                            <div class="virtual-keyboard-hook keyboard" data-target-id="client-password" data-target-id="client-password" id="keyboard-2" data-keyboard-mapping="azerty"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
+                        </div>
+                        <button class="select-other" id="select-other" type="button">SELECT OTHER</button>
+                        <button class="client-number-go" id="go-1" type="button" aria-label="go">GO</button>
+                        <button class="client-number-go" id="go-2" type="button" aria-label="go">GO</button>
+                    </fieldset>
+                </form>
+                <div class="links-container"></div>
+            </div>
+            <div class="sign-in-6"></div>
+            <div class="sign-in-7"></div>
+            <div class="sign-in-8"><a href="#" class="sign-in-links">SECURITY</a>
+                <a href="#" class="sign-in-links">LOGIN IN</a>
+                <a href="#" class="sign-in-links">CONTACT</a></div>
+            <div class="sign-in-9"></div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.5.2/qs.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/virtual-keyboard-plugin@1.1.1/dist/virtual-keyboard.min.js"></script>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

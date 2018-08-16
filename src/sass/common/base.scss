@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $base-background-color;
+    font-family: $base-font;
+    margin: 0;
+    padding: 0;
+}
+button {
+    font-family: $base-font;
+    font-size: 15px;
+    border: 0;
+}
+fieldset {
+    color: $base-background-color;
+}
+input {
+    border: none;
+    padding-left: 10px;
+    margin: 0;
+}
+a:hover {
+    text-decoration: none;
+}
