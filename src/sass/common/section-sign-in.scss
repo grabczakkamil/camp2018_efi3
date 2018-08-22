@@ -98,6 +98,7 @@ legend {
     border: 0;
     color: $dark-background-font-color;
     opacity: 0.8;
+    cursor: pointer;
 }
 .client-number-go {
     width: 118px;
@@ -105,6 +106,7 @@ legend {
     background-color: $dark-background-font-color;
     border-radius: $sign-in-section-border-radius;
     margin-top: 15px;
+    cursor: pointer;
 }
 
 .sign-in-links {
@@ -127,6 +129,7 @@ legend {
     margin: 0 0 0 10px;
     padding: 0;
     background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
 }
 .cross {
     width: 12px;
@@ -142,6 +145,7 @@ legend {
 }
 .keyboard {
     margin-left: 10px;
+    cursor: pointer;
 }
 .input-wrapper {
     display: flex;

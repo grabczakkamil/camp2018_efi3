@@ -3,13 +3,22 @@
     document.getElementById("sign-in-back").style.display = "none";
     document.getElementById("select-other").style.display = "none";
     document.getElementById("keyboard-2").style.display = "none";
-document.getElementById("go-2").style.display = "none";
+    document.getElementById("go-2").style.display = "none";
     (function () {
 
         var buttonGo = document.querySelector("#go-1");
         var buttonGoTwo = document.querySelector("#go-2");
 
-        buttonGo.addEventListener("click", hideElement);
+        buttonGo.addEventListener('click', function (event) {
+            var textBox1 = document.getElementById("set-client-number");
+
+            if (textBox1.value === "") {
+                alert('Wprowadź Numer Klienta!');
+            } else {
+                hideElement();
+            }
+            event.preventDefault();
+        });
 
         function hideElement() {
 
@@ -46,56 +55,86 @@ document.getElementById("go-2").style.display = "none";
             buttonGo.style.display = "inline-block";
             buttonGoTwo.style.display = "none";
         };
-//
-//        function login() {
-//            const data = {
-//                login: "efi",//TODO: ZAMIENIC NA WARTOŚĆ Z INPUTA
-//                password: "camp"//TODO: ZAMIENIC NA WARTOŚĆ Z INPUTA
-//            }
-//
-//            const options = {
-//                method: 'POST',
-//                headers: {
-//                    'content-type': 'application/x-www-form-urlencoded'
-//                },
-//                data: Qs.stringify(data),
-//                url: "https://efigence-camp.herokuapp.com/api/login",
-//            };
-//            
-//            axios(options).then(function (response) {
-//                console.log("success", response);
-//            }).catch(function (error) {
-//                 console.log("error", error);
-//            })
-//
-////            axios.post('https://efigence-camp.herokuapp.com/api/login', {
-////                login: 'efi',
-////                password: 'camp'
-////            }).then(function (response) {
-////                console.log("success", response);
-////            }).catch(function (error) {
-////                console.log("error", error);
-////            })
-//        }
-//
-//        buttonGo.addEventListener("click", login);
+
         function login() {
+
+            const clientNumber = document.getElementById("set-client-number").value;
+            const password = document.getElementById("client-password").value;
+            const data = {
+                login: clientNumber,
+                password: password
+            }
+const formData = new FormData();
+            
+            formData.append('login', clientNumber);
+            formData.append('password', password);
+            
+            const options = {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/x-www-form-urlencoded'
+                },
+                data: formData,
+                url: "https://efigence-camp.herokuapp.com/api/login",
+            };
+
+            axios(options).then(function (response) {
+                window.location.href = 'http://localhost:3000/dashboard.html';
+            }).catch(function (error) {
+                alert('Podane dane są nieprawidłowe');
+            })
+        }
+
+//       - inny zapis tego co powyżej -
+        
+            //                    axios.post('https://efigence-camp.herokuapp.com/api/login', {
+            //                        login: 'efi',
+            //                        password: 'camp'
+            //                    }).then(function (response) {
+            //                        console.log("success", response);
+            //                    }).catch(function (error) {
+            //                        console.log("error", error);
+            //                    })
+
+
+/*zapytanie do API javasrciptem, żeby działało trzeba podpiać skrypt ajax w pliku html*/
+
+        /*function login() {
             const xhttp = new XMLHttpRequest();
             const clientNumber = document.getElementById("set-client-number").value;
             const password = document.getElementById("client-password").value;
-           xhttp.onreadystatechange = function() {
-                if(xhttp.status == false) {
-                    if(xhttp.code = "l1") {
-                        alert("No login/password");
-                    }
-                    else if(xhttp.code = "l2") {
-                        alert("Wrong login/password");
-                    }
+            
+            
+            const data = {
+                login: clientNumber,
+                password: password
             }
-             
-           };
+            
+            xhttp.onreadystatechange = function () {
+                if (xhttp.status == 400) {
+
+                    alert('Podane dane są nieprawidłowe');
+                }
+                else if (xhttp.status == 200) {
+                    
+                    window.location.href = 'http://localhost:3000/dashboard.html';
+                }
+            };
+            
             xhttp.open('POST', 'https://efigence-camp.herokuapp.com/api/login', true);
-            xhttp.send(clientNumber, password);
-        }
-buttonGoTwo.addEventListener("click", login);
+            xhttp.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+            xhttp.send(Qs.stringify(data));
+        }*/
+
+        buttonGoTwo.addEventListener('click', function (event) {
+            var textBox2 = document.getElementById("client-password");
+
+            if (textBox2.value == null) {
+                alert('Wprowadź hasło!');
+            } else {
+                login();
+            }
+            event.preventDefault();
+        });
+
     })();
