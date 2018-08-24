@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -9,15 +9,87 @@
 </head>
 
 <body>
-    <nav class="navigation container">
+<!--
+    <div class="navigation container-fluid">
         <div class="row navi-bar">
-            <div class="hamburger col-4"></div>
+            <div class="hamburger col-4" id="hamburger">
+                <div class="hamburger-items" id="hamburger-items">
+                    <span class="hamburger-item burger-item-top"></span>
+                    <span class="hamburger-item burger-item-middle"></span>
+                    <span class="hamburger-item burger-item-bottom"></span>
+                </div>
+            </div>
             <div class="logo-dashboard align-center col-4">
                 <img src="../img/mobile1.png" alt="logo-efi3" class="logo-efi3">
             </div>
-            <div class="messages col-4">ADadAD</div>
+            <div class="messages col-4">
+                <button class="message-box-btn">
+            <img src="../img/ENVELOPE.png" alt="message-box"></button>
+            </div>
         </div>
-    </nav>
+        <nav class="main-nav col-12">
+            <ul>
+                <li class="menu-items"><a href="#home"><i class=""></i><span>HOME</span></a></li>
+                <li class="menu-items"><a href="#analyse"><i class=""></i><span>ANALYSE</span></a></li>
+                <li class="menu-items"><a href="#skills"><i class=""></i><span>PLAN</span></a></li>
+                <li class="menu-items"><a href="#portfolio"><i class=""></i><span>EARN</span></a></li>
+            </ul>
+        </nav>
+        <div class="row control-panel">
+            <div class="col-8 control-panel-items">
+                <div class="row">
+                    <div class="col-12">
+                        <p class="control-panel-titles">Available funds</p>
+                        <p class="control-panel-amounts">7200,34 PLN</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+-->
+   <div class="container-fluid dashboard">
+       <div class="row main-panel fixed-top">
+           <div class="hamburger col-4" id="hamburger">
+                <div class="hamburger-items" id="hamburger-items">
+                    <span class="hamburger-item burger-item-top"></span>
+                    <span class="hamburger-item burger-item-middle"></span>
+                    <span class="hamburger-item burger-item-bottom"></span>
+                </div>
+            </div>
+            <div class="logo-dashboard align-center col-4">
+                <img src="../img/mobile1.png" alt="logo-efi3" class="logo-efi3">
+            </div>
+            <div class="messages col-4">
+                <button class="message-box-btn">
+            <img src="../img/ENVELOPE.png" alt="message-box"></button>
+            </div>
+       </div>
+       <div class="row">
+           <nav class="col-12 main-nav">
+               <ul>
+                <li class="menu-items"><a href="#home"><i class=""></i><span>HOME</span></a></li>
+                <li class="menu-items"><a href="#analyse"><i class=""></i><span>ANALYSE</span></a></li>
+                <li class="menu-items"><a href="#skills"><i class=""></i><span>PLAN</span></a></li>
+                <li class="menu-items"><a href="#portfolio"><i class=""></i><span>EARN</span></a></li>
+            </ul>
+           </nav>
+       </div>
+       <div class="row control-panel">
+            <div class="col-7">
+                <div class="row">
+                    <div class="col-12 items-wrapper">
+                        <p class="control-panel-titles wrapper-item">Available funds</p>
+                        <p class="control-panel-amounts wrapper-item">7200,34 PLN</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 control-panel-button">
+                <button type="button" class="add-new-expense">Add New Expense</button>
+            </div>
+        </div>
+   </div>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

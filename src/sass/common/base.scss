@@ -7,11 +7,18 @@ body {
     font-family: $base-font;
     margin: 0;
     padding: 0;
+    height: 2000px;
 }
 button {
     font-family: $base-font;
     font-size: 15px;
-    border: 0;
+    border: none;
+    background-color: $app-items-color;
+    color: $dark-background-font-color;
+    border-radius: 2px;
+}
+button:focus {
+    outline: none;
 }
 fieldset {
     color: $base-background-color;
@@ -21,6 +28,15 @@ input {
     padding-left: 10px;
     margin: 0;
 }
-a:hover {
+a, a:hover {
     text-decoration: none;
+    color: $dark-background-font-color;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+   list-style: none;
 }
