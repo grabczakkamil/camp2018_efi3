@@ -49,6 +49,17 @@ gulp.task('js', () => {
         }));
 });
 
+gulp.task('js', () => {
+    const dst = 'public/js/';
+
+    return gulp.src('./src/js/dashboard.js')
+        .pipe(plumber())
+        .pipe(gulp.dest(dst))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
+
 gulp.task('html', () => {
     gulp.src(['src/html/*.html'], {
         base: 'src/html/'
