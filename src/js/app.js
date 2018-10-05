@@ -177,12 +177,6 @@ const formData = new FormData();
             event.preventDefault();
         });
         
-//    const burgerBtn = document.getElementById("hamburger-items");
-//    burgerBtn.addEventListener('click', function () {
-//      const element = document.querySelector(".dashboard");
-//        element.classList.toggle("burger-active");
-//        console.log("test");
-//    }); 
 //    
 //   KONFIGURACJA WYKRESU START             
 //    var ctx = document.getElementById('myChart').getContext('2d');
